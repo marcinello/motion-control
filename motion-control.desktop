@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=motion-control
+Exec=qmlscene $@ main.qml
+Icon=motion-control.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
