@@ -28,7 +28,8 @@ Page {
 
         UbuntuShape {
             width: parent.width
-            height: 80
+            height: units.gu(20)
+            color: "#d0dedf"
 
             Label {
                 id: statusText

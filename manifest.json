@@ -1,14 +1,14 @@
 {
     "architecture": "all",
     "description": "App to controll motion detection software for linux: http://www.lavrsen.dk/foswiki/bin/view/Motion/WebHome",
-    "framework": "ubuntu-sdk-14.04",
+    "framework": "ubuntu-sdk-14.10-qml-dev3",
     "hooks": {
         "motion-control": {
             "apparmor": "motion-control.apparmor",
             "desktop": "motion-control.desktop"
         }
     },
-    "maintainer": "Marcin Lesniowski <mmpoiu@gmail.com>",
+    "maintainer": "Marcin Leśniowski <mmpoiu@gmail.com>",
     "name": "com.ubuntu.developer.marcinello.motion-control",
     "title": "Motion detection control",
     "version": "0.1"
