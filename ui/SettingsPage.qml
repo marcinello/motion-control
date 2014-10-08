@@ -3,6 +3,10 @@ import Ubuntu.Components 1.1
 import "../components"
 
 Page {
+    id: _settingsPage
+    objectName: "settingsPage"
+    title: i18n.tr("Settings")
+
     tools: ToolbarItems {
         id: toolbarSettings
 
@@ -26,37 +30,54 @@ Page {
                 settings.thread = threadField.value;
                 settings.username = usernameField.value;
                 settings.password = passwordField.value;
+
+                pageStack.pop();
             }
         }
     ]
 
-    Column {
-        spacing: units.gu(2)
+    flickable: null
 
-        LabeledTextField {
-            id: addressField
-            labelText: "Address"
-            value: settings.address
-        }
-        LabeledTextField {
-            id: portField
-            labelText: "Port"
-            value: settings.port
-        }
-        LabeledTextField {
-            id: threadField
-            labelText: "Thread"
-            value: settings.thread
-        }
-        LabeledTextField {
-            id: usernameField
-            labelText: "Username"
-            value: settings.username
-        }
-        LabeledTextField {
-            id: passwordField
-            labelText: "Password"
-            value: settings.password
+    Flickable {
+        id: _flickable
+        anchors.fill: parent
+        contentWidth: parent.width
+
+        Column {
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
+                margins: units.gu(2)
+            }
+            spacing: units.gu(1)
+            width: parent.width
+
+            LabeledTextField {
+                id: addressField
+                labelText: "Address"
+                value: settings.address
+            }
+            LabeledTextField {
+                id: portField
+                labelText: "Port"
+                value: settings.port
+            }
+            LabeledTextField {
+                id: threadField
+                labelText: "Thread"
+                value: settings.thread
+            }
+            LabeledTextField {
+                id: usernameField
+                labelText: "Username"
+                value: settings.username
+            }
+            LabeledTextField {
+                id: passwordField
+                labelText: "Password"
+                value: settings.password
+            }
         }
     }
 }

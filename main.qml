@@ -38,21 +38,14 @@ MainView {
         console.debug("Debug: "+text);
     }
 
-    Tabs {
-        id: tabs
-        Tab {
-            title: i18n.tr("Home")
+    PageStack {
+        id: pageStack
 
-            page: ControlPage {
-                objectName: "home"
-            }
-        }
-        Tab {
-            title: i18n.tr("Settings")
+        Component.onCompleted: push(controlPage);
 
-            page: SettingsPage {
-                objectName: "settings"
-            }
+        ControlPage {
+            id: controlPage
+
         }
     }
 }

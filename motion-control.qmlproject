@@ -30,6 +30,10 @@ Project {
         paths: ["manifest.json",".excludes"]
     }
     Files {
+        directory: "."
+        paths: [".gitignore"]
+    }
+    Files {
         directory: "www"
         filter: "*"
     }
